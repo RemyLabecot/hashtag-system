@@ -1,4 +1,4 @@
-package com.remy.hashtagsystem.infrastructure.entity
+package com.remy.hashtagsystem.infrastructure.entities
 
 import lombok.AllArgsConstructor
 import lombok.Getter
@@ -9,7 +9,8 @@ import javax.persistence.*
 @Getter
 @Setter
 @Entity
-class Content {
+@Table(name="Content")
+class ContentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

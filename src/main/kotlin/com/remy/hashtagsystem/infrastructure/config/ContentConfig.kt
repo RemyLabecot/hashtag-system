@@ -1,8 +1,8 @@
 package com.remy.hashtagsystem.infrastructure.config
 
-import com.remy.hashtagsystem.domain.ports.ContentPersistencePort
-import com.remy.hashtagsystem.domain.ports.ContentServicePort
-import com.remy.hashtagsystem.domain.services.DomainContentService
+import com.remy.hashtagsystem.domain.services.ContentService
+import com.remy.hashtagsystem.domain.services.ContentServiceImpl
+import com.remy.hashtagsystem.infrastructure.repositories.DatabaseContentRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration
 class ContentConfig {
 
     @Bean
-    fun getContentServicePort(contentPersistencePort: ContentPersistencePort): ContentServicePort {
-        return DomainContentService(contentPersistencePort)
+    fun getContentService(databaseContentRepository: DatabaseContentRepository): ContentService {
+        return ContentServiceImpl(databaseContentRepository)
     }
 }

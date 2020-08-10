@@ -10,7 +10,7 @@ import java.util.ArrayList
 @Repository
 interface DatabaseContentRepository : CrudRepository<ContentEntity, Long>, ContentRepository  {
     override fun findAll(): List<ContentEntity>
-    override fun getContents(): List<Content> {
+    override fun toto(): List<Content> {
         val contentList = ArrayList<Content>()
         val contentEntityList = findAll()
 

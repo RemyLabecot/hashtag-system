@@ -1,4 +1,4 @@
-package com.remy.hashtagsystem.infrastructure
+package com.remy.hashtagsystem.infrastructure.adapters.persistence
 
 import com.remy.hashtagsystem.domain.models.Content
 import com.remy.hashtagsystem.domain.repositories.ContentRepository

@@ -1,4 +1,4 @@
-package com.remy.hashtagsystem.application
+package com.remy.hashtagsystem.infrastructure.adapters.webApi
 
 import com.remy.hashtagsystem.domain.models.Content
 import com.remy.hashtagsystem.domain.services.ContentService
